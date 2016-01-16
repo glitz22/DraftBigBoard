@@ -1,0 +1,28 @@
+<template name="editPlayer">
+	<h2>Update Player</h2>
+	<form name="updatePlayer" class="updatePlayer form-inline">
+		<input type="hidden" value="{{_id}}" name="playerid"/>
+		<div class="form-group">
+			<label>First Name: </label>
+			<input class="form-control" name="playerFirstName" type="text" value="{{firstName}}"/>
+		</div>
+		<div class="form-group">
+			<label>Last Name: </label>
+			<input class="form=control" name="playerLastName" type="text" value="{{lastName}}"/>
+		</div>
+		<div class="form-group">
+			<label>Position: </label>
+			<select class="form-control" name="playerPosition">
+				<option value="">Please select a position</option>
+				<option value="QB" {{ selected "QB" position }}>QB</option>
+				<option value="RB" {{ selected "RB" position }}>RB</option>
+				<option value="WR" {{ selected "WR" position }}>WR</option>
+				<option value="TE" {{ selected "TE" position }}>TE</option>
+				<option value="D/ST" {{ selected "D/ST" position }}>D/ST</option>
+				<option value="K" {{ selected "K" position }}>K</option>
+			</select>
+		</div>
+		<input class="btn btn-default" name="submitUpdatedPlayer" type="submit" value="Update Player!"/>
+	</form>
+	<p id="validationMessage"></p>	
+</template>

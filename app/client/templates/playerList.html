@@ -1,0 +1,37 @@
+<template name="playerList">
+	<ul class="list-inline">
+		<li><a class="filter-all" href="#">All</a></li>
+		<li><a class="filter-qb" href="#">QB</a></li>
+		<li><a class="filter-rb" href="#">RB</a></li>
+		<li><a class="filter-wr" href="#">WR</a></li>
+		<li><a class="filter-te" href="#">TE</a></li>
+		<li><a class="filter-dst" href="#">D/ST</a></li>
+		<li><a class="filter-k" href="#">K</a></li>
+	</ul>
+	<table class="playerTable table table-striped">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Position</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each players}}
+				{{> playerRow}}
+			{{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="playerRow">
+	<tr>
+		<td>{{firstName}}</td>
+		<td>{{lastName}}</td>
+		<td>{{position}}</td>
+		<td><a class="update-player" href="/players/edit/{{_id}}">Edit</a></td>
+		<td><a class="delete-player" href="#" data-playerInfo="{{firstName}} {{lastName}} {{position}}" data-playerid="{{_id}}">Delete</a></td>
+	</tr>
+</template>
