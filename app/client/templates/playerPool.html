@@ -1,5 +1,14 @@
 <template name="playerPool">
-	<div>
+	<div class="player-pool">
 		<h2>Here is the player pool</h2>
+		<ul>
+			{{#each players}}
+				{{>playerPoolList}}
+			{{/each}}
+		</ul>
 	</div>
+</template>
+
+<template name="playerPoolList">
+	<li draggable="true">{{firstName}} {{lastName}} {{position}}</li>
 </template>

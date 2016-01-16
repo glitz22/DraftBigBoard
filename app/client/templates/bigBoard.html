@@ -1,5 +1,25 @@
 <template name="bigBoard">
-	<div>
+	<div class="big-board">
 		<h2>This is where the big board will go.</h2>
+		<div class="round-contain">
+			{{#each rounds}}
+				{{>bigBoardPanel}}
+			{{/each}}
+		</div>	
+	</div>
+</template>
+
+<template name="bigBoardPanel">
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<a data-toggle="collapse" href="#collapse{{number}}">Round {{number}}</a>
+				</h3>
+			</div>
+		    <div id="collapse{{number}}" class="panel-collapse collapse">
+		      <p>Here is round {{number}} content</p>
+		    </div>				
+		</div>
 	</div>
 </template>

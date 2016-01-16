@@ -1,0 +1,20 @@
+body {
+	padding-top: 50px;
+}
+
+.big-board, .player-pool {
+	float:left;
+}
+
+.big-board {
+	width : 60%;
+}
+
+.player-pool {
+	width : 35%;
+}
+
+.round-contain {
+	height : 400px;
+	overflow-y: scroll;
+}
