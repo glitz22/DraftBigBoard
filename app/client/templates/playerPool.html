@@ -1,11 +1,17 @@
 <template name="playerPool">
 	<div class="player-pool">
+		<!--
 		<h2>Here is the player pool</h2>
-		<ul>
+		-->
+		<div class="input-group">
+			<input type="text" class="form-control" id="playerPoolFilter" placeholder="Search by name">
+		</div>
+		<ul class="list-unstyled" id="playerPoolList">
 			{{#each players}}
 				{{>playerPoolList}}
 			{{/each}}
 		</ul>
+		{{>playerFilter}}
 	</div>
 </template>
 

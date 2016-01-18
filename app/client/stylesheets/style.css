@@ -1,17 +1,29 @@
 body {
 	padding-top: 50px;
 }
-
-.big-board, .player-pool {
-	float:left;
-}
-
 .big-board {
 	width : 60%;
+	float: left;
+}
+
+#playerPoolFilter {
+	margin-top: -5px;
+}
+
+#playerPoolList {
+	overflow-y: hidden;
 }
 
 .player-pool {
 	width : 35%;
+	height:400px;
+	float: right;
+}
+
+.player-pool ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .round-contain {

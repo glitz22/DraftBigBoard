@@ -1,8 +1,7 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
   Session.setDefault("playerFilter","All");
   Session.setDefault("playerPoolFilter","All");
+  Session.setDefault("editState",false);
 }
 
 if (Meteor.isServer) {
